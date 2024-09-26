@@ -7,7 +7,7 @@
   oldfontcommands,
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%sdsklfjsdfection=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
@@ -69,7 +69,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Projeto de Modulação de Sinais}
+\titulo{Modulação de Sinais}
 \autor{Nicolas Cassio dos Santos -- SP3037231}
 \local{São Paulo}
 \data{2024}
@@ -80,10 +80,10 @@
   \par
   Engenharia Eletrônica}
 \tipotrabalho{Projeto prático}
-\orientador{Miguel Angelo}
+\orientador[Professor:]{Miguel Angelo de Abreu de Sousa}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Projeto prático para avaliação semestral na discplina de Princípio de Comunicações (PRICO)}
+\preambulo{Projeto de um trabalho teórico e prático a ser realizado para avaliação semestral na discplina de Princípio de Comunicações (PRICO)}
 % ---
 
 % ---
@@ -215,30 +215,96 @@
 % ----------------------------------------------------------
 % Introdução
 % ----------------------------------------------------------
-\chapter[Introdução]{Introdução}
+\chapter{Introdução}
 
-O texto deve ser constituído de uma parte introdutória, na qual devem ser expostos o tema do projeto, o problema a ser abordado, a(s) hipótese(s), quando couber(em), bem como o(s) objetivo(s) a ser(em) atingido(s) e a(s) justificativa(s). É necessário que sejam indicados o referencial teórico que o embasa, a metodologia a ser utilizada, assim como os recursos e o cronograma necessários à sua consecução
+A comunicação é um aspecto presente na sociedade humana. Antes do surgimento dos estudos em eletricidade, os meios de comunicação possuíam determinadas barreiras de distância e tempo. Com a utilização da comunicação eletrônica, algumas dessas barreiras foram transpostas.
+
+As primeiras técnicas utilizadas para estabelecer esse tipo de comunicação estão dentro do campo da eletrônica analógica. Dentre as teorias e técnicas utlizadas para concretizar esse tipo de comunicação, podem-se destacar a modulação e a demodulação de sinais. Cabe ao engenheiro eletrônico ser capaz de projetar e desenvolver os circuitos responsáveis por essa transformação no sinal de informação.
+
+\section{Objetivos}
+
+O trabalho tem como objetivo apresentar o embasamento teórico necessário para o desenvolvimento de circuitos analógicos moduladores e demoduladores de sinais. Junto a isso, serão de fato desenvolvidos os respectivos circuitos, a \emph{priori} apresentados em um \emph{software} de simulação. Após a simulação, um dos circuitos simulados será apresentado em bancada para a demonstração real do desenvolvimento do trabalho.
+
+\section{Justificativa}
+
+De acordo com o projeto pedagógico do curso (PPC) de bacharelado em engenharia eletrônica \cite{ppc}, a disciplina de PRICO tem como objetivo tornar o aluno competente na análise de sistemas de comunicação análogicos e na avaliação de aspectos técnicos que permeiam o desenvolvimento e a implantação desses sistemas. Acredita-se que durante todo o desenrolar do trabalho proposto, todas as competências citadas serão exploradas e, ao final, poderá ser avaliada a real eficiência atingida.
+
+\section{Metodologia}
+
+A parte teórica do trabalho será desenvolvida através de pesquisa em material bibliográfico que trate sobre os assuntos de comunicação eletrônica, eletrônica analógica, princípios matemáticos utilizados e princípios de eletricidade em geral. Serão utilizados aqueles materiais já citados no PPC \cite{ppc} e também materiais complementares que o autor julgar necessário.
+
+Já para a parte prática, serão utilizados \emph{softwares}, de preferência de código aberto, que possam simular os circuitos desenvolvidos. Posteriormente, técnicas de confecção de placas de circuito impresso serão exploradas para que a montagem do circuito escolhido seja feita.
+
+\section{Cronograma}
+
+O período previsto para a conclusão do trabalho, de forma a se adequar no calendário do semestre letivo \cite{calendario}, foi de 10 semanas. A distribuição das atividades durante esse tempo foi planejado conforme a \autoref{cronograma1} e a \autoref{cronograma2}.
+
+\begin{table}[htb]
+\IBGEtab{
+  \caption{Cronograma das primeiras semanas.}
+  \label{cronograma1}
+}{
+  \begin{tabular}{c|cccccccccc}
+    \toprule
+    Etapas & Semana 1 & Semana 2 & Semana 3 & Semana 4 & Semana 5 \\
+    \midrule \midrule
+    Teoria & X & X &&& \\
+    \midrule
+    Circuitos &&& X & X & X \\
+    \midrule
+    Simulação &&&& X & X \\
+    \midrule
+    Confecção &&&&& \\
+    \bottomrule
+  \end{tabular}%
+}{%
+  \fonte{Produzido pelo autor.}%
+}
+\end{table}
+
+\begin{table}[htb]
+\IBGEtab{
+  \caption{Cronograma das últimas semanas.}
+  \label{cronograma2}
+}{
+  \begin{tabular}{c|cccccccccc}
+    \toprule
+    Etapas & Semana 6 & Semana 7 & Semana 8 & Semana 9 & Semana 10 \\
+    \midrule \midrule
+    Teoria &&&&& \\
+    \midrule
+    Circuitos X & X & X &&& \\
+    \midrule
+    Simulação X & X & X & X && \\
+    \midrule
+    Confecção &&&& X & X \\
+    \bottomrule
+  \end{tabular}%
+}{%
+  \fonte{Produzido pelo autor.}%
+}
+\end{table}
 
 % ----------------------------------------------------------
 % Capitulo de textual  
 % ----------------------------------------------------------
-\chapter{Desenvolvimento}
+% \chapter{Desenvolvimento}
 
-Aqui vai o desenvolvimento.
+% Aqui vai o desenvolvimento.
 
 % ---
 % Finaliza a parte no bookmark do PDF
 % para que se inicie o bookmark na raiz
 % e adiciona espaço de parte no Sumário
 % ---
-\phantompart
+% \phantompart
 
 % ---
 % Conclusão
 % ---
-\chapter{Considerações finais}
+% \chapter{Considerações finais}
 
-Aqui talvez seja a conclusão.
+% Aqui talvez seja a conclusão.
 
 
 % ----------------------------------------------------------
@@ -246,7 +312,7 @@ Aqui talvez seja a conclusão.
 % ----------------------------------------------------------
 \postextual
 
-\nocite{livro}
+% \nocite{livro}
 
 % ----------------------------------------------------------
 % Referências bibliográficas
